@@ -14243,7 +14243,9 @@ var define;
 
 }));
 
-},{"jquery":"node_modules/jquery/dist/jquery.js"}],"images/intro-bg.jpg":[function(require,module,exports) {
+},{"jquery":"node_modules/jquery/dist/jquery.js"}],"images/honest.jpg":[function(require,module,exports) {
+module.exports = "/honest.c14c3633.jpg";
+},{}],"images/intro-bg.jpg":[function(require,module,exports) {
 module.exports = "/intro-bg.08b49ab3.jpg";
 },{}],"images/logo.png":[function(require,module,exports) {
 module.exports = "/logo.6023b87e.png";
@@ -14251,14 +14253,15 @@ module.exports = "/logo.6023b87e.png";
 module.exports = "/modern-black-drone.fbbfa4f0.png";
 },{}],"images/quadrocopter.png":[function(require,module,exports) {
 module.exports = "/quadrocopter.198e5525.png";
-},{}],"images/service-tours-signature.png":[function(require,module,exports) {
-module.exports = "/service-tours-signature.4ad8c78a.png";
-},{}],"images/honest.jpg":[function(require,module,exports) {
-module.exports = "/honest.c14c3633.jpg";
 },{}],"images/review.png":[function(require,module,exports) {
 module.exports = "/review.4459fd7e.png";
+},{}],"images/service-tours-signature.png":[function(require,module,exports) {
+module.exports = "/service-tours-signature.4ad8c78a.png";
 },{}],"images/*.{png,jpg}":[function(require,module,exports) {
 module.exports = {
+  "honest": {
+    "jpg": require("./honest.jpg")
+  },
   "intro-bg": {
     "jpg": require("./intro-bg.jpg")
   },
@@ -14271,17 +14274,14 @@ module.exports = {
   "quadrocopter": {
     "png": require("./quadrocopter.png")
   },
-  "service-tours-signature": {
-    "png": require("./service-tours-signature.png")
-  },
-  "honest": {
-    "jpg": require("./honest.jpg")
-  },
   "review": {
     "png": require("./review.png")
+  },
+  "service-tours-signature": {
+    "png": require("./service-tours-signature.png")
   }
 };
-},{"./intro-bg.jpg":"images/intro-bg.jpg","./logo.png":"images/logo.png","./modern-black-drone.png":"images/modern-black-drone.png","./quadrocopter.png":"images/quadrocopter.png","./service-tours-signature.png":"images/service-tours-signature.png","./honest.jpg":"images/honest.jpg","./review.png":"images/review.png"}],"app.js":[function(require,module,exports) {
+},{"./honest.jpg":"images/honest.jpg","./intro-bg.jpg":"images/intro-bg.jpg","./logo.png":"images/logo.png","./modern-black-drone.png":"images/modern-black-drone.png","./quadrocopter.png":"images/quadrocopter.png","./review.png":"images/review.png","./service-tours-signature.png":"images/service-tours-signature.png"}],"app.js":[function(require,module,exports) {
 "use strict";
 
 var _jquery = _interopRequireDefault(require("jquery"));
@@ -14384,7 +14384,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38273" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32877" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

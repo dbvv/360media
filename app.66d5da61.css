@@ -8698,6 +8698,41 @@ footer .copyrights {
     justify-content: flex-start;
   }
 }
+#contacts .contacts-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+#contacts .contacts-container .contacts-block {
+  flex: 0 80%;
+}
+#contacts .contacts-container .contacts-block .email {
+  font-size: 6rem;
+}
+@media screen and (max-width: 560px) {
+  #contacts .contacts-container .contacts-block {
+    flex: 0 100%;
+    width: 100%;
+    padding: 15px;
+  }
+  #contacts .contacts-container .contacts-block h3 {
+    font-size: 1.3rem;
+  }
+  #contacts .contacts-container .contacts-block form {
+    width: 100%;
+  }
+  #contacts .contacts-container .contacts-block input, #contacts .contacts-container .contacts-block textarea {
+    max-width: unset;
+  }
+  #contacts .contacts-container .contacts-block .email, #contacts .contacts-container .contacts-block .phone {
+    transform: none;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 1rem;
+    color: #fff;
+  }
+}
+
 #our-equipment {
   margin: 0 auto;
   padding-top: 80px;
