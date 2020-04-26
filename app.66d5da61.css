@@ -7857,12 +7857,12 @@ Fonts
 General
 ********************/
 html {
-  height: 100%;
+  width: 100vw;
 }
 
 body {
   min-height: 100%;
-  min-width: 320px;
+  width: 100vw;
   font-family: "Aeroport", sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -7975,6 +7975,7 @@ textarea {
   color: #141414;
   border: none;
   outline: none;
+  margin: 0 auto;
 }
 
 textarea {
@@ -8388,11 +8389,7 @@ h1 {
 }
 
 .our-works-slider .slick-slide {
-  margin: 0 22px;
-}
-
-.our-works-slider .slick-list {
-  margin: 0 -22px;
+  margin: 0;
 }
 
 .our-works-slider .slick-track {
@@ -8462,17 +8459,13 @@ h1 {
 
 #contacts {
   margin-bottom: 100px;
-  background: #141414;
-  background: -webkit-linear-gradient(left, rgba(20, 20, 20, 0) 50%, #141414 50%, #141414 100%);
-  background: -o-linear-gradient(left, rgba(20, 20, 20, 0) 50%, #141414 50%, #141414 100%);
-  background: linear-gradient(to right, rgba(20, 20, 20, 0) 50%, #141414 50%, #141414 100%);
 }
 
 .contacts-block {
   position: relative;
-  padding: 72px 185px;
   margin-left: auto;
   background-color: #141414;
+  padding: 112px 0;
 }
 
 .contacts-block h3 {
@@ -8480,10 +8473,12 @@ h1 {
   font-size: 36px;
   font-weight: bold;
   color: #fff;
-}
-
-.contacts-block form {
-  width: 444px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
 }
 
 .contacts-block .btn-contacts {
@@ -8661,6 +8656,26 @@ footer .copyrights {
     min-width: unset;
   }
 }
+@media screen and (max-width: 768px) and (min-width: 560px) {
+  #features {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .main-footer .logo {
+    margin-right: 10px;
+  }
+  .main-footer .footer-menu {
+    justify-content: space-around;
+  }
+  .main-footer .footer-menu li {
+    flex: 0 40%;
+    margin: 0;
+  }
+  .main-footer .footer-contacts {
+    white-space: nowrap;
+  }
+}
 @media screen and (max-width: 560px) {
   #intro {
     min-height: 100vh;
@@ -8807,6 +8822,11 @@ footer .copyrights {
     visibility: hidden !important;
   }
 }
+@media screen and (max-width: 560px) {
+  #our-equipment .equipment-content {
+    margin-top: 60px;
+  }
+}
 #our-equipment .slick-arrow {
   margin-top: 10%;
 }
@@ -8822,6 +8842,7 @@ footer .copyrights {
 }
 #our-equipment .slick-arrow.slick-prev {
   left: 30%;
+  z-index: 99999;
 }
 #our-equipment .slick-arrow.slick-prev:before {
   content: "";
@@ -8862,6 +8883,32 @@ footer .copyrights {
 #reviews img {
   width: 100%;
   max-width: 100%;
+}
+
+#our-works .slick-slide {
+  padding: 20px;
+}
+
+#contacts {
+  padding: 72px 0;
+}
+@media screen and (min-width: 560px) {
+  #contacts .email {
+    max-width: 100%;
+    overflow: hidden;
+    font-size: calc(100vw / 15) !important;
+  }
+  #contacts .phone {
+    font-size: calc(100vw / 13) !important;
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 560px) {
+  #services .service-item {
+    width: 100vw;
+    height: auto;
+    margin-top: 0px;
+  }
 }
 
 /*# sourceMappingURL=/app.66d5da61.css.map */
